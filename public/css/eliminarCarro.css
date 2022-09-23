@@ -1,0 +1,66 @@
+@media (min-width:320px){
+
+
+
+.boton-eliminar-carro{
+    margin-left: 140px;
+}
+
+.barra__busqueda{
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 70%;
+    padding: 4px;
+    border-radius: 4px;
+    border-width: 1px;
+    height: 30px;
+}
+}
+@media (min-width:375px){
+
+    .boton-eliminar-carro{
+        margin-left: 170px;
+    }
+
+}
+
+@media (min-width:425px){
+
+    .boton-eliminar-carro{
+        margin-left: 200px;
+    }
+
+}
+
+@media (min-width:768px){
+
+    .boton-eliminar-carro{
+        margin-left: 365px;
+    }
+
+}
+
+@media (min-width:1024px){
+
+    .boton-eliminar-carro{
+        margin-left: 485px;
+    }
+
+}
+
+@media (min-width:1440px){
+
+    .boton-eliminar-carro{
+        margin-left: 875px;
+    }
+    .barra__busqueda{
+        margin-left: 410px;
+        margin-top: 50px;
+        width: 34%;
+        padding: 4px;
+        border-radius: 4px;
+        border-width: 1px;
+        height: 30px;
+    }
+
+}

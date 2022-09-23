@@ -1,0 +1,47 @@
+@media (min-width:311px){
+footer {
+  width: 100%;
+    padding: 13%;
+    background-color: black;
+    text-align: center;
+  }
+
+}  
+  
+  
+  .divsFooter {
+    color: #fff;
+    background-color: #000;
+    margin-bottom: 15px;
+
+  }
+  
+  .direcciones {
+    color: #ebebeb;
+  }
+  
+  .piedefooter {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+  }
+  
+  /*section {
+    width: 86%;
+    margin-bottom: 25px;
+  }*/
+
+  @media (min-width: 768px)  {
+      footer{
+       width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+      }
+      .divsFooter{
+          margin-right: 50px;
+      }
+  }
+
+  

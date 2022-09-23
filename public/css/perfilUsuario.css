@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     
+}
+
+body{
+    background: url( "/images/porche1.webp") no-repeat;
+    background-size: cover;
+    font-family: 'Century Gothic', sans-serif;    
+}
+
+
+.box{
+    width: 500px;
+    background-color: rgba(0, 0, 0, .4);
+    margin: auto;   
+    margin-top: 4%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+
+}
+.box-img{
+    border-radius: 50%;
+}
+
+.box h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin: 30px 0px 20px;
+
+}
+
+.box h2{
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+
+.box p{
+    text-align: justify;
+}
+
+.box ul{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.box ul li{
+    display: inline-block;
+}
+
+.box ul li a{
+    color: red;
+    font-size: 45px;
+    padding: 10px 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.box ul li a:hover{
+    color: #b9b9b9;
+    transform: scale(1.3);
+}
+/*.contenedor-perfil-usuario {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 25px;
+    margin-top: 20%;
+    
+}
+
+.titulo-perfil {
+    margin: 20px 0;
+}
+
+.datos-usuario-contenido {
+    display: flex;
+}
+
+
+.redes-sociales{
+    display: flex;
+}*/

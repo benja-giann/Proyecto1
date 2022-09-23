@@ -1,0 +1,34 @@
+ <%-include("partials/head.ejs")%>
+
+<body class="allBody">
+  <%-include ("partials/header.ejs") %>
+
+  <div class="banner2"></div>
+  <main>
+    <h1 class="title-historial">Historial de compras</h1>
+
+    <section class="gondola1">
+      <div class="productos">
+        <% carros.map((carro) => { %>
+        <article class="articulo">
+          <a href="/carros/detalle/<%= carro.id %>">
+            <img src="/images/<%= carro.marca.toLowerCase() %><%=carro.id % 3 + 1%>.jpg" alt="carro"/>
+          </a>
+          <h4 class="descripcion"><%=carro.name %></h4>
+          <div class="carro-footer">
+            <div>
+              <p class="desc-descripcion"><%=carro.descuento%>% OFF</p>
+              <p class="precios">$ <%= carro.precio %></p>
+            </div>
+            <p class="camion">
+              <i class="fa-solid fa-truck"></i>
+            </p>
+          </div class="carro-footer">
+        </article>
+        <%}) %>
+      </div>
+    </section>
+  </main>
+
+  <%-include("partials/footer.ejs")%>
+</body>

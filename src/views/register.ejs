@@ -1,0 +1,56 @@
+<%-include("partials/head.ejs")%>
+<body class="allBody">
+ <%-include("partials/header.ejs") %>
+  <div class="banner2">
+
+  </div>
+
+
+  <main>
+    <div class="main-registro">
+
+    <section >
+     
+      <form class="formulario-registro" action="/users/register" method="POST" enctype="multipart/form-data">
+        <div>
+          <br />
+          <input class="input" type="text" name="name" placeholder="Nombre" value="<%= locals.old && old.name ? old.name : "" %>"/>
+        </div>
+        <div>
+          <br />
+          <input class="input" type="file" name="imagenUsuario"/>
+        </div>
+        <div>
+          <br />
+          <input class="input" type="email" name="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : "" %>"/>
+        </div>
+        <div>
+          <br />
+          <input class="input" type="password" name="password" placeholder="Contraseña" value="<%= locals.old && old.password ? old.password : "" %>"/>
+        </div>
+        <div>
+          <br />
+          <input class="input" type="password" name="comfirm" placeholder="Confirmar Contraseña" value="<%= locals.old && old.comfirm ? old.comfirm : "" %>"/>
+        </div>
+        <% errors.forEach((error) => { %>
+          <p class="mensaje-error"><%= error.msg %></p>
+       <% }) %>
+  
+        
+
+        <div class="button-container">
+          <button class="button" type="submit">Crear Cuenta</button>
+        </div>
+        <div class="button-container">
+          <button class="button" type="reset">Reset</button>
+      </div>
+      </form>
+    </section>
+    </div>
+  </main>
+
+
+  <%-include("partials/footer.ejs") %>
+</body>
+
+</html>

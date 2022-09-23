@@ -1,0 +1,25 @@
+<%-include("partials/head.ejs")%>
+
+    <body class="allBody">
+        <%-include("partials/header.ejs") %>
+
+
+            <main>
+                <div class="inputBusqueda">
+                    <input type="text" class="barra__busqueda" value="Buscar carro">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <form class="formulario-crear" action="/carros/crear" method="POST">
+
+                    <div class="boton-eliminar-carro">
+                        <button class="button" type="submit">eliminar</button>
+
+                    </div>
+                </form>
+
+            </main>
+
+
+            <%-include("partials/footer.ejs") %>
+    </body>

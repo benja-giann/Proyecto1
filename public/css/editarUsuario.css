@@ -1,0 +1,74 @@
+.button-editar-usuario{background-color: black;
+padding: 1%;
+width: 45%;
+margin-right: 53px;
+color: white;
+}
+
+
+@media (min-width:320px){ 
+.button-editar{ 
+display: flex;
+flex-direction: column;
+padding: 1px;
+width: 60%;
+margin-left: 37%;
+}
+}
+
+
+@media (min-width:375px){
+  .inputEditarUsuario{
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+    width: 60%;
+    margin: auto;
+  }
+  
+  }
+
+@media (min-width:768px){ 
+    
+    .inputEditarUsuario{
+        display: flex;
+        flex-direction: column;
+        padding: 1px;
+        width: 30%;
+        margin: auto;
+    }
+    .button-editar{
+        display: flex;
+        flex-direction: column;
+        padding: 1px;
+        width: 30%;
+        margin-left: 43%;
+    }
+        
+    }
+
+
+    @media (min-width:1024px){ 
+    
+        .inputEditarUsuario{
+            display: flex;
+            flex-direction: column;
+            padding: 1px;
+            width: 30%;
+            margin: auto;
+            margin-top: 10px;
+            font-size: 25px;
+        }
+        .input-editar-usuario{
+          display: flex;
+          flex-direction: column;
+          padding: 1px;
+          width: 30%;
+          margin: auto;
+          margin-top: 10px;
+          font-size: 15px;
+          height: 30px;
+          border-radius: 4px;
+          border-width: 1px;
+      }
+        }

@@ -1,0 +1,56 @@
+<%-include("partials/head.ejs")%>
+<body>
+    <%-include("partials/header.ejs")%>
+    <main>
+        <% productos.map(producto=> { %> 
+            <% if (producto.id === "????") { %>
+        <div class="nombre-auto">
+            <h3>2022 0km</h3>
+            <h1><%=producto.name %></h1>
+            <h3>Publicado hace x dias</h3>
+
+        </div>
+        <% } %>
+        
+
+            aqui incluir otro tag de ejs?
+        <div class="main-detalle-producto">
+
+            <img src=<%=producto.imagen %> alt="">
+        </div>
+
+        <div class="precio-detalle-producto">
+            <h1>$ <%= producto.precio %></h1>
+            <h3>Ver precios de referencia</h3>
+
+        </div>
+  
+                
+                <div class="comprar-carrito">
+                  
+                      <button class="iralcarrito"><a href="/carrito">
+                         <h1> Agregar al Carrito</h1>
+                      </a>
+                      </button>
+                      <a href="/pago">
+                      <button class="comprarahora">
+                      
+                          <h1>Comprar Ahora</h1>
+                      
+                      </button>
+                      </a>
+                </div>
+                <div class="ficha-tecnica-detalle-producto">
+                    <H1>Ficha Tecnica</H1>
+                    <p><%=producto.ficha-tecnica%></p>
+                </div>
+                <div class="opiniones-detalle-producto">
+                    <h1>Opiniones de clientes</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quas consequuntur expedita, dicta nam perferendis dolorum doloremque, ab aliquam iure laudantium repellat, in adipisci vel. Voluptates nesciunt debitis fugiat eos.</p>
+                </div>
+    <%}) %>            
+    </main>
+    <%-include("partials/footer.ejs") %>
+</body>
+
+</html>

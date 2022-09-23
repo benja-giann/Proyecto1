@@ -1,0 +1,58 @@
+.formulario-crear {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 32px 0;
+  }
+  
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+
+  .main-registro{
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+      padding: 4%;
+      margin-left: 50%;
+    
+  }
+
+  @media (min-width:320px){
+    .main-registro{
+      margin: 0%;
+      display: flex;
+      justify-content: center;
+        padding: 4%;
+        margin-left: 10%;
+  }
+}
+
+@media (min-width:425px){
+  .main-registro{
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+      padding: 4%;
+     
+}
+}
+
+@media (min-width:768px){
+  .main-registro{
+  margin: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 4%;
+  margin-top: 0%;
+}
+}

@@ -1,0 +1,45 @@
+<%-include("partials/head.ejs")%>
+
+<body class="allBody">
+  <%-include("partials/header.ejs")%> 
+
+
+  <main>
+    <div class="main-registro">
+      <section>
+        <h6>Editando el vehiculo</h6>
+        <form class="formulario-editar" action="/carros?_method=PUT" method="POST">
+          <div>
+            <input class="input" type="text" placeholder="Vehiculo a editar" name="name" value="" />
+          </div>
+          <div class="ficha__tecnica">
+            <textarea name="ficha_tecnica" class="descrip_ficha" placeholder="ficha tecnica" rows="4" value=""></textarea>
+          </div>
+          <div>
+            <select class="input" name="marca" placeholder="marca" value="">
+              <option value="BMW">BMW</option>
+              <option value="AUDI">AUDI</option>
+              <option value="PORSCHE">PORSCHE</option>
+            </select>
+          </div>
+          <div>
+            <input class="input" type="number" placeholder="% OFF" name="descuento" min="0" max="100" value=""/>
+          </div>
+          <div>
+            <input class="input" type="number" placeholder="precio" name="precio" value=""/>
+          </div>
+          <!-- <div class="input-contaier">
+            <label>Seleccionar la imagen del vehiculo a vender</label>
+            <input class="input" type="file" name="imagen" accept="jpg" multiple />
+          </div> -->
+          <div class="button-container">
+            <button class="button" type="submit">confirmar edicion</button>
+            <button class="button" type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <%-include("partials/footer.ejs")%>
+</body>

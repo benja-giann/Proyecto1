@@ -1,0 +1,107 @@
+<%-include("partials/head.ejs")%>
+
+   <body class="allBody">
+      <%-include ("partials/header.ejs") %>
+
+         <div class="banner2">
+
+
+         </div>
+
+         <main>
+            
+            <section class="gondola1">
+
+               <h1>BMW</h1>
+               <div class="productos">
+
+                  <% carros.map((carro)=> { %>
+                     <% if (carro.marca==="BMW" && carro.comprador===null) { %>
+                        <article class="articulo">
+                           <a href="/carros/detalle/<%= carro.id %>"><img class="auto-imagen"  src="/images/bmw<%=carro.id % 3 + 1%>.jpg"
+                                 alt="BMW"></a>
+                           <h4 class="descripcion">
+                              <%=carro.name %>
+                           </h4>
+                           <p class="camion">
+                              <i2 class="fa-solid fa-truck"></i2>
+                           </p>
+                           <p class="precios">
+                              $ <%= carro.precio %>
+                           </p>
+                           <p class="desc-descripcion">
+                              <%=carro.descuento%>% OFF
+                           </p>
+                        </article>
+                        <% } %>
+                           <%}) %>
+               </div>
+            </section>
+
+            <section class="gondola2">
+               <h1>AUDI</h1>
+
+               <div class="productos">
+
+
+                  <% carros.map((carro)=> { %>
+                     <% if (carro.marca==='AUDI' ) { %>
+                        <article class="articulo">
+                           <a href="/carros/detalle/<%= carro.id %>"><img class="auto-imagen" src="/images/audi<%=carro.id % 3 + 1%>.jpg"
+                                 alt="AUDI"></a>
+                           <h4 class="descripcion">
+                              <%=carro.name %>
+                           </h4>
+                           <p class="camion">
+                              <i2 class="fa-solid fa-truck"></i2>
+                           </p>
+                           <p class="precios">
+                              $ <%= carro.precio %>
+                           </p>
+                           <p class="desc-descripcion">
+                              <%=carro.descuento%>% OFF
+                           </p>
+                        </article>
+                        <% } %>
+                           <%}) %>
+               </div>
+            </section>
+
+            <section class="gondola3">
+               <h1>PORSCHE</h1><br>
+               <div class="productos">
+
+                  <% carros.map((carro)=> { %>
+                     <% if (carro.marca==="PORSCHE" ) { %>
+                        <article class="articulo">
+                           <a href="/carros/detalle/<%= carro.id %>"><img class="auto-imagen"  src="/images/porsche<%=carro.id % 3 + 1%>.jpg"
+                                 alt="AUDI"></a>
+                           <h4 class="descripcion">
+                              <%=carro.name %>
+                           </h4>
+                           <p class="camion">
+                              <i2 class="fa-solid fa-truck"></i2>
+                           </p>
+                           <p class="precios">
+                              $ <%= carro.precio %>
+                           </p>
+                           <p class="desc-descripcion">
+                              <%=carro.descuento%>% OFF
+                           </p>
+                        </article>
+                        <% } %>
+                           <%}) %>
+               </div>
+
+            </section>
+         </main>
+
+         <%-include("partials/footer.ejs")%>
+
+
+   </body>
+
+
+
+
+   </html>

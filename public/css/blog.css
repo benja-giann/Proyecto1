@@ -1,0 +1,37 @@
+#blog .contenedor {
+   
+    margin: auto;
+    text-align: center;
+
+}
+
+
+#blog article{
+    margin: 15px;
+}
+
+#blog img{
+
+    width: 100%;
+    max-width: 280px;
+}
+
+#blog h3,h4{
+    text-align: center ;
+}
+
+@media (min-width:768px) {
+    #blog .contenedor{
+        display: flex;
+        width: 100%;
+    justify-content: space-evenly;
+    } 
+}
+
+
+@media (min-width:1024px) {
+    #blog .contenedor{
+        flex-wrap: nowrap;
+    }
+    
+}

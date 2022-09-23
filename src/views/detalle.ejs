@@ -1,0 +1,50 @@
+<%-include("partials/head.ejs")%>
+<body class="allBody">
+    <%-include("partials/header.ejs")%>
+    <main>
+        <div class="main-detalle-producto">
+            <div class="nombre-auto">
+                <h3>2022 0km</h3>
+                <h1><%= carro.name %></h1>
+                <h3>Publicado hace <%= carro.id % 9 + 1 %> dias</h3>
+            </div>
+            <% if (carro.marca === "BMW") { %>
+                <img src="/images/bmw<%=carro.id % 3 + 1%>.jpg" alt="BMW">
+            <% } %>
+            <% if (carro.marca === "AUDI") { %>
+                <img src="/images/audi<%=carro.id % 3 + 1%>.jpg" alt="BMW">
+            <% } %>
+            <% if (carro.marca === "PORSCHE") { %>
+                <img src="/images/porsche<%=carro.id % 3 + 1%>.jpg" alt="BMW">
+            <% } %>
+        </div>
+
+        <div class="precio-detalle-producto">
+            <h1>$<%= carro.precio %></h1>
+            <h3>Ver precios de referencia</h3>
+
+        </div>
+  
+                
+                <div class="comprar-carrito">
+                  
+                       <button class="iralcarrito"><a href="/carrito">
+                         <h1> Agregar al Carrito</h1>
+                      </a>
+                    </button>
+                  
+                </div>
+                <div class="ficha-tecnica-detalle-producto">
+                    <H1>Ficha Tecnica</H1>
+                    <p><%= carro.fichaTecnica %></p>
+                </div>
+                <div class="opiniones-detalle-producto">
+                    <h1>Opiniones de clientes</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quas consequuntur expedita, dicta nam perferendis dolorum doloremque, ab aliquam iure laudantium repellat, in adipisci vel. Voluptates nesciunt debitis fugiat eos.</p>
+                </div>
+                
+    </main>
+    <%-include("partials/footer.ejs") %>
+</body>
+
+</html>

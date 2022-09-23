@@ -1,0 +1,46 @@
+<%-include("partials/head.ejs")%>
+
+  <body class="allBody">
+    <%-include("partials/header.ejs") %>
+    
+      <main>
+
+          <section>
+
+            <form class="formulario-registro" action="/users/edit?_method=PUT" method="POST">
+              <div>
+                <label for="name">imagen de perfil</label>
+                <br />
+                <input class="input-editar-usuario" type="file" name="imagenUsuario" />
+              </div>
+              <div>
+                <br />
+                <input class="input-editar-usuario" type="text" name="name" placeholder="Nombre"
+                  value="<%= locals.old && old.name ? old.name : "" %>" />
+              </div>
+              <div>
+                <br />
+                <input class="input-editar-usuario" type="email" name="email" placeholder="Email"
+                  value="<%= locals.old && old.email ? old.email : "" %>" />
+              </div>
+              <div>
+                <br />
+                <input class="input-editar-usuario" type="password" name="password" placeholder="Contraseña"
+                  value="<%= locals.old && old.password ? old.password : "" %>" />
+              </div>
+              <div>
+                <br />
+                <input class="input-editar-usuario" type="password" name="comfirm" placeholder="Confirmar Contraseña"
+                  value="<%= locals.old && old.comfirm ? old.comfirm : "" %>" />
+              </div>
+              <div class="button-editar">
+                <button class="button-editar-usuario" type="submit" name="editar" value="editar" >guardar cambios</button>
+              </div>
+          </section>
+        </div>
+     
+
+      <%-include("partials/footer.ejs") %>
+  </body>
+
+  </html>

@@ -1,0 +1,6 @@
+.create-container {
+  display: flex;
+  justify-content: end;
+  margin-right: 15%;
+  margin-bottom: 80px;
+}

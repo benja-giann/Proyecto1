@@ -1,0 +1,53 @@
+
+/*.contenedor-datos-para-pago {
+    display: flex;
+    align-items: center;
+}*/
+
+.datos-auto-para-pagar {
+    display: flex;
+}
+
+.elementos-texto-de-producto {
+    padding-right: 50px;
+}
+
+.imagen-auto-carrito-de-compra {
+    width: 150px;
+    align-self: center;
+}
+
+.texto-producto-compra {
+    padding: 15px;
+}
+
+.button {
+    width: 150px;
+    height: 25px;
+    border-radius: 9%;
+    color: white;
+    background-color: black;
+    font-size: 10px;
+}
+
+.boton-pagar{
+    padding: 50px;
+}
+
+.boton-vaciar{
+    padding: 50px;
+}
+
+.main-carrito{
+margin-top: 5%;
+}
+
+.imagen-carrito{
+    width: 100%;
+}
+
+@media (min-width:1024px){
+    .contenedor-datos-para-pago{
+        display: flex;
+    }
+}

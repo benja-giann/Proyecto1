@@ -1,0 +1,62 @@
+.banner2 {
+    height: 30vh;
+    margin-bottom: 25px;
+    margin-left: 0%;
+    
+    margin-top: 50px;
+    object-fit: cover;
+    background-size: 100% 100%;
+  
+    animation: banner2 10s infinite alternate;
+
+    position: relative;
+    width: 120%;
+  }
+  
+@media (min-width:321px){ 
+.banner2 {
+  height: 30vh;
+  margin-bottom: 25px;
+  margin-left: 10%;
+  
+  margin-top: 50px;
+  object-fit: cover;
+  background-size: 100% 100%;
+
+  animation: banner2 10s infinite alternate;
+
+  position: relative;
+  width: 80%;
+}
+}
+
+  @keyframes banner2 {
+    0%,
+    30% {
+      background-image: url(/images/bmw3.jpg);
+    }
+    35%,
+    65% {
+      background-image: url(/images/AudiTTRS.jpg);
+    }
+    70%,
+    100% {
+      background-image: url(/images/porsche1.jpg);
+    }
+  }
+  
+
+
+  .texto-banner{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+  }
+
+  .texto-banner p{
+      color: #fff;
+      font-size: 28px;
+      font-style: italic;
+  }
+

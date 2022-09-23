@@ -1,0 +1,49 @@
+<%-include("partials/head.ejs")%>
+
+<body class="allBody">
+  <%-include("partials/header.ejs")%>
+  <main>
+    <div class="main-registro">
+      <section>
+        <h1>Crea Vehiculo</h1>
+
+        <form class="formulario-crear" action="/carros/crear" method="POST" >
+          <div>
+            <label for="name">imagen de perfil</label>
+            <br />
+        
+          </div>
+          <div>
+            <input class="input" type="text" name="name" placeholder="nombre del vehiculo" />
+          </div>
+          <div>
+            <textarea name="ficha_tecnica" rows="4"></textarea>
+          </div>
+          <div>
+            <select class="input" name="marca">
+              <option value="BMW">BMW</option>
+              <option value="AUDI">AUDI</option>
+              <option value="PORSCHE">PORSCHE</option>
+            </select>
+          </div>
+          <div>
+            <input class="input" type="number" placeholder="% OFF" name="descuento" min="0" max="100" />
+          </div>
+          <div>
+            <input class="input" type="number" placeholder="precio" name="precio" />
+          </div>
+          <!-- <div class="input-contaier">
+            <label>Seleccionar la imagen del vehiculo a vender</label>
+            <input class="input" type="file" name="imagen" accept="jpg" multiple />
+          </div> -->
+          <div class="button-container">
+            <button class="button" type="submit">Agregar producto</button>
+            <button class="button" type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <%-include("partials/footer.ejs")%>
+</body>

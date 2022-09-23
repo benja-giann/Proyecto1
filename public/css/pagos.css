@@ -1,0 +1,50 @@
+.Mercadopago{
+    padding: 5%;
+    display: block;
+    justify-content: center;
+   
+
+}
+
+.Mercadopago2{
+    
+    margin: 5px 5px 5px 5px ;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.Mercadopago2 i{
+    
+    margin: 2px;
+}
+
+.Mercadopago2 h2{
+    font-size: 16px;
+    margin-left: 2%;
+}
+
+.Mercadopago2 h4{
+    color: blue;
+    margin-left: 5%;
+}
+
+.LISTA li{
+    height: 30px;
+    
+    display: flex;
+}
+
+.LISTA ul{
+    
+    justify-content: center;
+}
+
+.LISTA { 
+    
+    margin-bottom: 30px;
+    width: auto;
+    justify-content: center;
+    display: flex;
+
+}
