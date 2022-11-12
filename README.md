@@ -12,14 +12,6 @@ La compra de vehículos nuevos cuenta con la posibilidad de elegir color, modelo
 <p>A través del desarrollo de una interfaz gráfica amigable que genere confianza en el usuario, pretendemos lograr la consecución de una gran cantidad de clientes que refieran nuestro sitio como el número 1 en compra de vehículos. </p>
 
 ------------------------------------------------------------------------------------------------------------
-<h3> Descripción integrantes del equipo: </h3>
-<ul>
-<li>	Nombre y Apellido: Ivan Cure Chegwin </li>
-<li>	Edad: 35 </li>
-<li>	Ocupación actual: Abogado, empleado en Organización sin ánimo de lucro para la implementación de proyectos de sociales y estudiante de programación web full stack en Digital House. </li>
-<li>	Ubicación actual: Colombia – Barranquilla. </li>
-<li>	Cuenta de Github: https://github.com/ivancurech </li>
-</ul>
 
 <ul>
 <li>Nombre y Apellido: Benjamin Gianneschi</li>
@@ -27,22 +19,6 @@ La compra de vehículos nuevos cuenta con la posibilidad de elegir color, modelo
 <li>Ocupación actual:  Estudiante de programación web full stack en Digital House.</li>
 <li>Ubicación actual: Argentina – Santa Fe.</li>
 <li>Cuenta de Github: https://github.com/benja-giann</li>
-</ul>
-
-<ul>
-<li>Nombre y Apellido: Javier Gutiérrez Canitrot</li>
-<li>Edad: 30</li>
-<li>Ocupación actual: IT Help Desk.</li>
-<li>Ubicación actual: Argentina – Buenos Aires.</li>
-<li>Cuenta de Github: https://github.com/JavierGutierrezCanitrot</li>
-</ul>
-
-<ul>
-<li>Nombre y Apellido: Agustin Bianchi</li>
-<li>Edad: 30 </li>
-<li>Ocupación actual: Empleado administrativo</li>
-<li>Ubicación actual: Argentina - 	Cordoba Capital</li>
-<li>Cuenta de Github: https://github.com/agustinbianchi22</li>
 </ul>
 
 <h4>----------------------------------------------------------------------------------------------------------</h4>
