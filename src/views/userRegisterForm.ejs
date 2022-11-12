@@ -1,0 +1,323 @@
+<%-include("partials/head.ejs")%>
+
+  <body class="allBody">
+    <%-include("partials/header.ejs") %>
+      <div class="banner2">
+
+      </div>
+
+
+      <main class="main-registro">
+        
+
+          
+
+            <script>
+              window.addEventListener("load", function () {
+                let formulario = document.querySelector(".formulario-registro")
+
+                formulario.addEventListener("submit", function (e) {
+
+
+
+                  let name = document.querySelector("input.name")
+                  let apellido = document.querySelector("input.apellido")
+                  let dni = document.querySelector("input.dni")
+                  let fecha_nacim = document.querySelector("input.fecha_nacim")
+                  let provincia = document.querySelector("input.provincia")
+                  let cod_postal = document.querySelector("input.cod_postal")
+                  let imagenUsuario = document.querySelector("input.imagenUsuario")
+                  let email = document.querySelector("input.email")
+                  let password = document.querySelector("input.password")
+                  let confirm_password = document.querySelector("input.confirm_password")
+
+                  let errors = []
+
+                  if (name.value === "") {
+                    errors.push("Nombre requerido");
+                  } else if (name.value.length < 5) {
+                    alert("El campo nombre debe tener al menos 5 caracteres")
+                  }
+
+                  if (apellido.value === "") {
+                    errors.push("Apellido requerido");
+                  } else if (surname.value.length < 3) {
+                    errors.psuh("El campo apellido debe tener al menos 3  caracteres")
+                  }
+
+                  if (dni.value === "") {
+                    errors.push("DNI requerido");
+                  } else if (dni.value.length < 5) {
+                    errors.push("El campo DNI debe tener al menos 8 caracteres")
+                  }
+
+                  if (fecha_nacim.value === "") {
+                    errors.push("Fecha de nacimientro requerido");
+                  }
+
+                  if (provincia.value === "") {
+                    errors.push("Provincia requerido");
+                  } else if (provincia.value.length < 4) {
+                    errors.psuh("El campo Provincia debe tener al menos 5 caracteres")
+                  }
+
+                  if (cod_postal.value === "") {
+                    errors.push("Codigo postal requerido");
+                  }
+
+                  if (imagenUsuario.value === "") {
+                    errors.push("Imagen de usuario requerido");
+                  }
+
+                  if (email.value === "") {
+                    errors.push("Correo electronico requerido");
+                  }
+
+                  if (password.value === "") {
+                    errors.push("Contraseña requerida");
+                  } else if (password.value.length < 7) {
+                    errors.push("El campo contraseña debe tener al menos 7 caracteres")
+                  }
+
+                  if (confirm_password.value === "") {
+                    errors.push("Confirmar contraseña requerido");
+                  } else if (confirm_password.value.length < 7) {
+                    errors.push("El campo Confirmar contraseña debe tener al menos 7 caracteres y debe ser igual a la contraseña original")
+                  }
+
+                  if (errors.length > 0) {
+                    e.preventDefault();
+
+
+                    let ulErrors = document.querySelector("div.erorrs ul")
+
+
+                    for (let i = 0; i < errors.length; i++) {
+
+                      ulErrors.innerHTML += "<li>" + errors[i] + "</li>"
+                    }
+                  } else {
+                    formulario.submit();
+                  }
+                })
+              })
+            </script>
+
+
+
+
+            <form class="formulario-de-registro" action="/userRegisterForm" method="POST" enctype="multipart/form-data">
+
+
+
+              <div class="errors">
+                <ul>
+
+                </ul>
+              </div>
+
+
+              <div class="formulario-de-registro"></div>
+                <br />
+              
+                <input type="text" name="name" placeholder="Nombre"
+                  class="form-register <%= locals.errors && errors.name ? 'is-invalid' : null %>"
+                  value="<%= locals.oldData ? oldData.name : null %>" <% if (locals.errors && errors.name) { %>
+
+                <div class="text-danger">
+
+                  <%= errors.name.msg %>
+
+                </div>
+
+                <% } %>
+              </div >
+
+
+              <div class="formulario-de-registro">
+                <br />
+                <input type="text" name="apellido" placeholder="Apellido"
+                  class="form-register <%= locals.errors && errors.apellido ? 'is-invalid' : null %>"
+                  value="<%= locals.oldData ? oldData.apellido : null %>" <% if (locals.errors && errors.apellido) { %>
+
+                <div class="text-danger">
+
+                  <%= errors.apellido.msg %>
+
+                </div>
+
+                <% } %>
+              </div>
+              
+              
+              <div class="formulario-de-registro">
+                <br />
+                <input type="text" name="dni" placeholder="DNI"
+                  class="form-register <%= locals.errors && errors.dni ? 'is-invalid' : null %>"
+                  value="<%= locals.oldData ? oldData.dni : null %>" <% if (locals.errors && errors.dni) { %>
+
+                <div class="text-danger">
+
+                  <%= errors.dni.msg %>
+
+                </div>
+
+                <% } %>
+              </div>
+
+
+              <div class="formulario-de-registro">
+                <br />
+                <input type="date" name="fecha_nacim" placeholder="Fecha de nacimiento"
+                  class="form-register <%= locals.errors && errors.fecha_nacim ? 'is-invalid' : null %> "
+                  value="<%= locals.oldData ? oldData.fecha_nacim : null %>" <% if (locals.errors && errors.fecha_nacim)
+                  { %>
+
+                <div class="text-danger">
+
+                  <%= errors.fecha_nacim.msg %>
+
+                </div>
+
+                <% } %>
+              </div>
+
+              <div class="formulario-de-registro">
+                <label><b>País de nacimiento:</b></label>
+                <select name="country"
+                  class="form-register <%= locals.errors && errors.country ? 'is-invalid' : null %>">
+
+                  <option value="">Elegí un país</option>
+                  <% let countries=['Argentina', 'Bolivia' , 'Brasil' , 'Colombia' , 'Chile' , 'Ecuador' , 'Paraguay'
+                    , 'Perú' , 'Uruguay' , 'Venezuela' ]; %>
+                    <% for (const oneCountry of countries) { %>
+                      <option value="<%= oneCountry %>" <%=locals.oldData && (oneCountry===oldData.country) ? 'selected'
+                        : null %>
+                        > <%= oneCountry %>
+                      </option>
+                      <% } %>
+                </select>
+                <% if (locals.errors && errors.country) { %>
+                  <div class="text-danger">
+                    <%= errors.country.msg %>
+                  </div>
+                  <% } %>
+              </div>
+
+
+              <div class="formulario-de-registro">
+                <br />
+                <input type="text" name="provincia" placeholder="Provincia"
+                  class="form-register <%= locals.errors && errors.provincia ? 'is-invalid' : null %>"
+                  value="<%= locals.oldData ? oldData.provincia : null %>" <% if (locals.errors && errors.provincia) {
+                  %>
+
+                <div class="text-danger">
+
+                  <%= errors.provincia.msg %>
+
+                </div>
+
+                <% } %>
+              </div>
+
+              <div class="formulario-de-registro">
+                <br />
+                <input type="text" name="cod_postal" placeholder="Codigo postal"
+                  class="form-register <%= locals.errors && errors.cod_postal ? 'is-invalid' : null %>"
+                  value="<%= locals.oldData ? oldData.cod_postal : null %>" <% if (locals.errors && errors.cod_postal) {
+                  %>
+
+                <div class="text-danger">
+
+                  <%= errors.cod_postal.msg %>
+
+                </div>
+
+                <% } %>
+              </div>
+
+
+              <div class="formulario-de-registro">
+                <br />
+                <input type="file" name="imagenUsuario"
+                  class="form-register <%= locals.errors && errors.imagenUsuario ? 'is-invalid' : null %>"
+                  value="<%= locals.oldData ? oldData.imagenUsuario : null %>" <% if (locals.errors &&
+                  errors.imagenUsuario) { %>
+
+                <div class="text-danger">
+
+                  <%= errors.imagenUsuario.msg %>
+
+                </div>
+
+                <% } %>
+              </div>
+
+              <div class="formulario-de-registro">
+                <br />
+                <input type="email" name="email" placeholder="Email"
+                  class="form-register <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                  value="<%= locals.oldData ? oldData.email : null %>" <% if (locals.errors && errors.email) { %>
+
+                <div class="text-danger">
+
+                  <%= errors.email.msg %>
+
+                </div>
+
+                <% } %>
+              </div>
+ 
+
+              <div class="formulario-de-registro">
+                <br />
+                <input type="password" name="password" placeholder="Contraseña"
+                  class="form-register <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                    
+
+                <% if (locals.errors && errors.password) { %>
+
+                  <div class="text-danger">
+
+                    <%= errors.password.msg %>
+
+                  </div>
+
+                  <% } %>
+
+              </div>
+
+              <div class="formulario-de-registro">
+                <br />
+                <input type="password" name="confirm_password" placeholder="Confirmar Contraseña"
+                  class="form-register <%= locals.errors && errors.confirm_password ? 'is-invalid' : null %>"
+                   
+
+                <% if (locals.errors && errors.confirm_password) { %>
+
+                  <div class="text-danger">
+
+                    <%= errors.confirm_password.msg %>
+
+                  </div>
+
+                  <% } %>
+              </div>
+
+
+
+              <div class="button-container">
+                <button class="button" type="submit">Crear Cuenta</button>
+              </div>
+
+              <div class="button-container">
+                <button class="button" type="reset">Reset</button>
+              </div>
+
+            </form>
+          </main>
+      <%-include("partials/footer.ejs") %>
+  </body>
+
+  </html>

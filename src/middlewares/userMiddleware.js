@@ -1,5 +1,3 @@
-
-
 const funcionesMDW={
  validacionUsuario:(req, res, next)=>{
  

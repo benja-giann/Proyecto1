@@ -4,13 +4,13 @@
     <%-include("partials/header.ejs")%>
       <section class="box">
 
-        <img src="/images/audi1.jpg" width="180" alt="" class="box-img">
-        <h1>Benjamin Gianneschi</h1>
+        <img src="/images/imagenUsuario/<%= user.imagenUsuario %>" width="180" alt="" class="box-img">
+        <h1>Hi <%= user.name %> </h1>
         <h2 class="Oficio">Desarrollador Full Stack - Web Developer</h2>
         <p class="reseña">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam magni quibusdam, tenetur
           similique nihil aspernatur inventore reprehenderit delectus distinctio illum suscipit ipsum architecto dolores
           obcaecati, ea a eveniet excepturi natus.</p>
-
+        
         <ul>
           <li>
             <a href="https://facebook.com"><i class="fa-brands fa-square-facebook"></i></a>
@@ -38,7 +38,8 @@
 
       </div>
       </main>
-      <%-include("partials/footer.ejs")%>
+      
   </body>
+  <%-include("partials/footer.ejs")%>
 
   </html>

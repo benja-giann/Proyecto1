@@ -8,11 +8,17 @@ const port = 5500;
 const methodOverride= require('method-override');
 const multer= require('multer');
 
-const userMiddleware = require('./middlewares/userMiddleware');
-const logMiddleware=require("./middlewares/logMiddleware");
-const enMantenimientoMiddleware=require("./middlewares/enMantenimientoMiddleware");
 
-app.use(session({ secret: 'Nuestro mensaje secreto' }));
+
+app.use(session({
+    secret: 'Nuestro mensaje secreto',
+    resave:false,
+    saveUninitialized:false
+    }));
+
+//Middleware
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+app.use(userLoggedMiddleware);
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -29,18 +35,16 @@ app.use(methodOverride("_method"));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
 
-app.get("/productos/:idProducto", function(req, res){
-    res.send("Bienvenido al detalle del producto" + req.params.idProducto)
-});
 
 const indexRouter = require('./routes/mainRoutes');
-const userRouter = require('./routes/users');
-const productosRouter = require('./routes/productos');
-const carrosRouter = require('./routes/carros');
+const userRouter = require('./routes/usersRoutes');
+const productosRouter = require('./routes/productosRoutes');
+const autosRouter = require('./routes/autosRoutes');
 
 app.use('/', indexRouter);
 app.use('/api/productos', productosRouter);
+app.use('/productos', productosRouter);
 app.use('/users', userRouter);
-app.use('/carros', carrosRouter);
+app.use('/autos', autosRouter);
 
 app.listen(port, () => console.log('estoy funcionando en el puerto ' + port));

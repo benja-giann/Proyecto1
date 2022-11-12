@@ -49,10 +49,13 @@
 
 @media (min-width:768px){
   .main-registro{
-  margin: 50%;
+  margin: 0%;
   display: flex;
   justify-content: center;
   padding: 4%;
   margin-top: 0%;
 }
+
 }
+
+

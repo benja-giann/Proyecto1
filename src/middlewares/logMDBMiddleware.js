@@ -5,4 +5,4 @@ function logDBMMiddleware(req, res, next){
     next();
 }
 
-module.exports=elogDBMMiddleware;
+module.exports=logDBMMiddleware;

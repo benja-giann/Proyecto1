@@ -1,0 +1,39 @@
+<%-include("partials/head.ejs")%>
+
+<body class="allBody">
+    <%-include("partials/header.ejs") %>
+
+    <div class="banner2"></div>
+
+    <% errors.forEach((error) => { %>
+      <p class="mensaje-error"><%= error.msg %></p>
+   <% }) %>
+
+    <main class="main-registro">
+        <section class="registro-con-correo">
+            
+            <form class="formulario-inicio-de-session" action="/userLoginForm" method="POST">
+                <div>
+                  <br />
+                  <input class="input" type="email" name="email" placeholder="Email"  />
+                  <% if (locals.errors && errors.email) {%>
+                  <div class="text-danger">
+                    <%= errors.email.msg %> 
+                  </div>
+                  <% } %>
+                </div>
+                <div>
+                  <br />
+                  <input class="input" type="password" name="password" placeholder="Contraseña" id="password"/>
+                </div>
+                <div class="completarCampo" id="errorList"></div>
+                <div class="button-container">
+                  <button class="button" type="submit">Ingresar</button>
+                </div>
+              </form>
+    </main>
+
+    <%-include("partials/footer.ejs") %>
+</body>
+
+</html>

@@ -1,49 +1,108 @@
 <%-include("partials/head.ejs")%>
 
-<body class="allBody">
-  <%-include("partials/header.ejs")%>
-  <main>
-    <div class="main-registro">
-      <section>
-        <h1>Crea Vehiculo</h1>
+  <body class="allBody">
+    <%-include("partials/header.ejs")%>
+      <main>
+        <div class="main-registro">
+          <section>
+            <h1>Crea Vehiculo</h1>
 
-        <form class="formulario-crear" action="/carros/crear" method="POST" >
-          <div>
-            <label for="name">imagen de perfil</label>
-            <br />
-        
-          </div>
-          <div>
-            <input class="input" type="text" name="name" placeholder="nombre del vehiculo" />
-          </div>
-          <div>
-            <textarea name="ficha_tecnica" rows="4"></textarea>
-          </div>
-          <div>
-            <select class="input" name="marca">
-              <option value="BMW">BMW</option>
-              <option value="AUDI">AUDI</option>
-              <option value="PORSCHE">PORSCHE</option>
-            </select>
-          </div>
-          <div>
-            <input class="input" type="number" placeholder="% OFF" name="descuento" min="0" max="100" />
-          </div>
-          <div>
-            <input class="input" type="number" placeholder="precio" name="precio" />
-          </div>
-          <!-- <div class="input-contaier">
-            <label>Seleccionar la imagen del vehiculo a vender</label>
-            <input class="input" type="file" name="imagen" accept="jpg" multiple />
-          </div> -->
-          <div class="button-container">
-            <button class="button" type="submit">Agregar producto</button>
-            <button class="button" type="reset">Reset</button>
-          </div>
-        </form>
-      </section>
-    </div>
-  </main>
+            <form class="formulario-crear" action="/autos/crear" method="POST" enctype="multipart/form-data">
+              <div>
+                <label for="name">imagen de perfil</label>
+                <div>
+                  <br />
+                  <input class="input" type="file" name="imagenUsuario" />
+                </div>
+                <br />
 
-  <%-include("partials/footer.ejs")%>
-</body>
+              </div>
+              <div>
+                <select class="input" name="marca" >
+                  <option value="GAMA BAJA">GAMA BAJA</option>
+                  <option value="GAMA MEDIA">GAMA MEDIA</option>
+                  <option value="GAMA ALTA">GAMA ALTA</option>
+                  <option value="GAMA CLASICOS">CLASICOS</option>
+                </select>
+              </div>
+              <div>
+                <input class="input" type="text" name="modelo" placeholder="modelo del vehiculo" />
+              </div>
+              <div>
+                <select class="input" name="marca" aria-placeholder="marca">
+                  <option value="BMW">BMW</option>
+                  <option value="AUDI">AUDI</option>
+                  <option value="PORSCHE">PORSCHE</option>
+                  <option value="CHEVROLET">CHEVROLET</option>
+                  <option value="FORD">FORD</option>
+                  <option value="MERCEDES BENZ">MERCEDES BENZ</option>
+                  <option value="TOYOTA">TOYOTA</option>
+                  <option value="FERRARI">FERRARI</option>
+                  <option value="ASTON MARTIN">ASTON MARTIN</option>
+                </select>
+              </div>
+              <div>
+                <input class="input" type="text" name="cilindrada" placeholder="cilindrada del vehiculo" />
+              </div>
+              <div>
+                <input class="input" type="number" name="potencia" placeholder="potencia del vehiculo" min="100" max="1000"  />
+              </div>
+              <div>
+                <select class="input" name="color_id">
+                  <option value="Rojo">ROJO</option>
+                  <option value="Amarrillo">AMARRILLO</option>
+                  <option value="Negro">NEGRO</option>
+                  <option value="Gris">GRIS</option>
+                  <option value="Blanco">BLANCO</option>
+                  <option value="Verde">VERDE</option>
+                  <option value="Rosado">ROSADO</option>
+                  <option value="Naranja">NARANJA</option>
+                </select>
+              </div>
+
+              <div>
+              <textarea name="descripcion" rows="8"></textarea>
+              </div>
+              <div>
+                <input class="input" type="number" placeholder="precio" name="precio" />
+              </div>
+              <div>
+                <input class="input" type="number" placeholder="% OFF" name="oferta" min="0" max="100" />
+              </div>
+              <div>
+                <input class="input" type="number" name="stock" placeholder="stock del vehiculo" min="0" max="100" />
+              </div>
+              <div>
+                <input class="input" type="text" name="garantia" placeholder="garantia del vehiculo" />
+              </div>
+
+              <div>
+                <select class="input" name="origen">
+                  <option value="Aleman">ALEMAN</option>
+                  <option value="Austria">AUSTRIA</option>
+                  <option value="Estadps Unidos">ESTADOS UNIDOS</option>
+                  <option value="Japon">JAPON</option>
+                  <option value="Italia">ITALIA</option>
+                  <option value="Londres">LONDRES</option>
+                </select>
+              </div>
+
+              <div class="button-container-">
+                <button class="button" type="submit">Agregar producto</button>
+              </div>
+              <div >
+                <button class="button" type="reset">Reset</button>
+              </div>
+
+
+          
+
+
+
+            </form>
+          </section>
+        </div>
+      </main>
+
+      <%-include("partials/footer.ejs")%>
+  </body>

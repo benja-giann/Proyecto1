@@ -28,35 +28,96 @@
   position: relative;
   width: 80%;
 }
+@keyframes banner2 {
+  0%,
+  30% {
+    background-image: url(/images/bmw3.jpg);
+  }
+  35%,
+  65% {
+    background-image: url(/images/AudiTTRS.jpg);
+  }
+  70%,
+  100% {
+    background-image: url(/images/porsche1.jpg);
+  }
+}
+}
+.texto-banner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
-  @keyframes banner2 {
+.texto-banner p{
+  color: #fff;
+  font-size: 28px;
+  font-style: italic;
+}
+
+/*/////////////////////////////////*/
+
+
+.banner1 {
+  top: -50px;
+  height: 40vh;
+  margin-bottom: 25px;
+  margin-left: 0%;
+  
+  margin-top: 50px;
+  object-fit: cover;
+  background-size: 100% 100%;
+
+  animation: banner1 10s infinite alternate;
+
+  position: relative;
+  width: 100%;
+}
+
+
+  
+
+  @keyframes banner1 {
     0%,
+    10% {
+      background-image: url(/images/ferraribanner.jpg);
+    }
+    15%,
+    20% {
+      background-image: url(/images/Mercedeslogo.jpg);
+    }
+    25%,
     30% {
-      background-image: url(/images/bmw3.jpg);
+      background-image: url(/images/porchebanner.jpg);
     }
     35%,
-    65% {
-      background-image: url(/images/AudiTTRS.jpg);
+    40% {
+      background-image: url(/images/Audibanner.png);
     }
-    70%,
+    45%,
+    50% {
+      background-image: url(/images/bmwlogo.jpg);
+    }
+    55%,
+    60% {
+      background-image: url(/images/astonmartinlogo.jpg);
+    }
+    65%,
+    70% {
+      background-image: url(/images/logochevrolet.webp);
+    } 
+    75%,
+    80% {
+      background-image: url(/images/teslalogo.png);
+    }
+    85%,
+    90% {
+      background-image: url(/images/fordlogo.jpg);
+    }
+    95%,
     100% {
-      background-image: url(/images/porsche1.jpg);
+      background-image: url(/images/toyotalogo.jpg);
     }
   }
   
-
-
-  .texto-banner{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-  }
-
-  .texto-banner p{
-      color: #fff;
-      font-size: 28px;
-      font-style: italic;
-  }
-

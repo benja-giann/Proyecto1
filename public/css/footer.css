@@ -1,7 +1,7 @@
 @media (min-width:311px){
 footer {
   width: 100%;
-    padding: 13%;
+    padding: 3%;
     background-color: black;
     text-align: center;
   }
@@ -37,6 +37,7 @@ footer {
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 20%;
     
       }
       .divsFooter{

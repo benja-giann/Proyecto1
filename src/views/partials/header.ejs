@@ -5,13 +5,13 @@
     <label class="icon-menu" for="menu-bar"><i class="fa-solid fa-bars"></i></label>
 
     <nav class="menu">
-      <!-- <a href="/carrito">Carrito<i class="fa-solid fa-basket-shopping"></i></a> -->
+      
       <a href="/servicios">Servicio al Cliente</a>
-      <a href="/carros">Autos</a>
-      <!-- <a href="/ayuda">Ayuda</a> -->
-      <% if (!locals.usuario) { %>
-      <a href="/users/register">Crea tu cuenta <i class="fa-solid fa-user"></i></a>
-      <a href="/users/login">Ingresa <i class="fa-solid fa-user-check"></i></a>
+      <a href="/autos">Autos</a>
+     
+      <% if (locals.usuario) { %>
+      <a href="/userRegisterForm">Crea tu cuenta <i class="fa-solid fa-user"></i></a>
+      <a href="/userLoginForm">Ingresa <i class="fa-solid fa-user-check"></i></a>
       <% } else { %>
       <a href="/users/historial">Historial de Compras</a>
       <a href="/users/logout">Cerrar Sesion</a>

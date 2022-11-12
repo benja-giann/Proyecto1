@@ -13,24 +13,24 @@
             <section class="gondola1">
 
                <h1>BMW</h1>
-               <div class="productos">
+               <div class="autos">
 
-                  <% carros.map((carro)=> { %>
-                     <% if (carro.marca==="BMW" && carro.comprador===null) { %>
+                  <% autos.map((auto)=> { %>
+                     <% if (auto.marca==="BMW" && auto.comprador===null) { %>
                         <article class="articulo">
-                           <a href="/carros/detalle/<%= carro.id %>"><img class="auto-imagen"  src="/images/bmw<%=carro.id % 3 + 1%>.jpg"
+                           <a href="/autos/detalle/<%= auto.id %>"><img class="auto-imagen"  src="/images/bmw<%=auto.id % 3 + 1%>.jpg"
                                  alt="BMW"></a>
                            <h4 class="descripcion">
-                              <%=carro.name %>
+                              <%=auto.name %>
                            </h4>
                            <p class="camion">
                               <i2 class="fa-solid fa-truck"></i2>
                            </p>
                            <p class="precios">
-                              $ <%= carro.precio %>
+                              $ <%= auto.precio %>
                            </p>
                            <p class="desc-descripcion">
-                              <%=carro.descuento%>% OFF
+                              <%=auto.descuento%>% OFF
                            </p>
                         </article>
                         <% } %>
@@ -41,25 +41,25 @@
             <section class="gondola2">
                <h1>AUDI</h1>
 
-               <div class="productos">
+               <div class="autos">
 
 
-                  <% carros.map((carro)=> { %>
-                     <% if (carro.marca==='AUDI' ) { %>
+                  <% autos.map((auto)=> { %>
+                     <% if (auto.marca==='AUDI' ) { %>
                         <article class="articulo">
-                           <a href="/carros/detalle/<%= carro.id %>"><img class="auto-imagen" src="/images/audi<%=carro.id % 3 + 1%>.jpg"
+                           <a href="/autos/detalle/<%= carro.id %>"><img class="auto-imagen" src="/images/audi<%=auto.id % 3 + 1%>.jpg"
                                  alt="AUDI"></a>
                            <h4 class="descripcion">
-                              <%=carro.name %>
+                              <%=auto.name %>
                            </h4>
                            <p class="camion">
                               <i2 class="fa-solid fa-truck"></i2>
                            </p>
                            <p class="precios">
-                              $ <%= carro.precio %>
+                              $ <%= auto.precio %>
                            </p>
                            <p class="desc-descripcion">
-                              <%=carro.descuento%>% OFF
+                              <%=auto.descuento%>% OFF
                            </p>
                         </article>
                         <% } %>
@@ -69,24 +69,24 @@
 
             <section class="gondola3">
                <h1>PORSCHE</h1><br>
-               <div class="productos">
+               <div class="autos">
 
-                  <% carros.map((carro)=> { %>
-                     <% if (carro.marca==="PORSCHE" ) { %>
+                  <% autos.map((auto)=> { %>
+                     <% if (auto.marca==="PORSCHE" ) { %>
                         <article class="articulo">
-                           <a href="/carros/detalle/<%= carro.id %>"><img class="auto-imagen"  src="/images/porsche<%=carro.id % 3 + 1%>.jpg"
+                           <a href="/autos/detalle/<%= auto.id %>"><img class="auto-imagen"  src="/images/porsche<%=auto.id % 3 + 1%>.jpg"
                                  alt="AUDI"></a>
                            <h4 class="descripcion">
-                              <%=carro.name %>
+                              <%=auto.name %>
                            </h4>
                            <p class="camion">
                               <i2 class="fa-solid fa-truck"></i2>
                            </p>
                            <p class="precios">
-                              $ <%= carro.precio %>
+                              $ <%= auto.precio %>
                            </p>
                            <p class="desc-descripcion">
-                              <%=carro.descuento%>% OFF
+                              <%=auto.descuento%>% OFF
                            </p>
                         </article>
                         <% } %>
